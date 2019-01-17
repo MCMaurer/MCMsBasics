@@ -14,3 +14,4 @@ LazyData: true
 Imports:
   dplyr,
   ggplot2
+RoxygenNote: 6.1.1
