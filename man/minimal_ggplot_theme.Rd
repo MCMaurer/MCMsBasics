@@ -16,5 +16,5 @@ A ggplot theme
 A nice minimal ggplot theme
 }
 \examples{
-mtcars \%>\% ggplot2(aes(x = wt, y = mpg)) + geom_point() + minimal_ggplot_theme()
+mtcars \%>\% ggplot(aes(x = wt, y = mpg)) + geom_point() + minimal_ggplot_theme()
 }

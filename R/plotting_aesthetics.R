@@ -7,7 +7,7 @@
 #' @import ggplot2
 #'
 #' @examples
-#' mtcars %>% ggplot2(aes(x = wt, y = mpg)) + geom_point() + minimal_ggplot_theme()
+#' mtcars %>% ggplot(aes(x = wt, y = mpg)) + geom_point() + minimal_ggplot_theme()
 minimal_ggplot_theme <- function(base_family = "Roboto Condensed"){
   theme_bw(base_family = base_family) +
     theme(legend.background = element_blank(), legend.key = element_blank(),

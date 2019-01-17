@@ -4,7 +4,7 @@ Title: Helps Michael Culshaw-Maurer Get Stuff Done
 Version: 0.1.0
 Authors@R: person("Michael", "Culshaw-Maurer", email = "mjculshawmaurer@ucdavis.edu",
   role = c("aut", "cre"))
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: Michael Culshaw-Maurer <mjculshawmaurer@ucdavis.edu>
 Description: A growing collection of functions to help me
     be productive and diligent in maintaining some consistency
     when working in R.
