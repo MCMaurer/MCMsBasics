@@ -4,7 +4,7 @@
 #'
 #' @return A ggplot theme
 #' @export
-#' @importFrom ggplot2 theme_bw
+#' @import ggplot2
 #'
 #' @examples
 #' mtcars %>% ggplot2(aes(x = wt, y = mpg)) + geom_point() + minimal_ggplot_theme()
