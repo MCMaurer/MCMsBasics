@@ -4,10 +4,12 @@
 \alias{minimal_ggplot_theme}
 \title{A nice minimal ggplot theme}
 \usage{
-minimal_ggplot_theme(base_family = "Roboto Condensed")
+minimal_ggplot_theme(base_family = "Roboto Condensed", gridlines = F)
 }
 \arguments{
 \item{base_family:}{the base font family, defaults to "Roboto Condensed"}
+
+\item{gridlines:}{should gridlines be displayed? defaults to F}
 }
 \value{
 A ggplot theme
