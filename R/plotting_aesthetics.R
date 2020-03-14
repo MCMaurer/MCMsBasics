@@ -14,7 +14,7 @@ minimal_ggplot_theme <- function(base_family = "Roboto Condensed", gridlines = F
     theme(legend.background = element_blank(), legend.key = element_blank(),
           panel.background = element_blank(), panel.border = element_blank(),
           strip.background = element_blank(), plot.background = element_blank(),
-          axis.line = element_blank(),
+          axis.line = element_blank(), panel.grid.minor = element_blank(),
           axis.ticks = element_blank())
 
   if(!gridlines){
