@@ -9,5 +9,5 @@
 #' @import ggplot2
 #'
 scale_x_quantile <- function(val, prob = seq(0, 1, 0.25), digits = 1, ...) {
-  scale_x_continuous(..., trans = quantile_trans(!!val, prob, digits))
+  scale_x_continuous(..., trans = quantile_trans(val, prob, digits))
 }
