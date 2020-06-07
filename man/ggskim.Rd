@@ -4,7 +4,7 @@
 \alias{ggskim}
 \title{Create ggplots to quickly explore data}
 \usage{
-ggskim(.data, plot = T)
+ggskim(.data, plot = T, ...)
 }
 \arguments{
 \item{.data:}{a dataframe to make plots from}
