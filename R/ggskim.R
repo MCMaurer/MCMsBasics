@@ -13,12 +13,12 @@
 #'
 #'
 
-ggskim <- function(.data, plot = T, ...){
+ggskim <- function(.data, ...){
 
   d_num <- .data %>%
     select_if(is.numeric)
 
-  if(ncol(d_num > 0)){
+  if(ncol(d_num) > 0){
 
     d_num <- d_num %>%
       pivot_longer(cols = everything(),
@@ -35,7 +35,7 @@ ggskim <- function(.data, plot = T, ...){
   d_other <- .data %>%
     select_if(function(x) !is.numeric(x))
 
-  if(ncol(d_other > 0)){
+  if(ncol(d_other) > 0){
     d_other <- d_other %>%
       mutate_if(.predicate = function(x) !is.factor(x), .funs = as.factor) %>%
       pivot_longer(cols = everything(),
@@ -58,11 +58,5 @@ ggskim <- function(.data, plot = T, ...){
     p_list$p_other <- p_other
   }
 
-
-  if(plot){
-    p_num
-    p_other
-  } else {
-    return(p_list)
-  }
+  return(p_list)
 }
