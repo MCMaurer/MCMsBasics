@@ -15,30 +15,54 @@
 
 ggskim <- function(.data, plot = T, ...){
 
-  p_num <- .data %>%
-    select_if(is.numeric) %>%
-    pivot_longer(cols = everything(),
-                 names_to = "column",
-                 values_to = "value") %>%
-    ggplot(aes(x = value)) +
-    geom_histogram() +
-    facet_wrap(vars(column), scales = "free")
+  d_num <- .data %>%
+    select_if(is.numeric)
 
-  p_other <- .data %>%
-    select_if(function(x) !is.numeric(x)) %>%
-    mutate_if(.predicate = function(x) !is.factor(x), .funs = as.factor) %>%
-    pivot_longer(cols = everything(),
-                 names_to = "column",
-                 values_to = "value") %>%
-    ggplot(aes(x = value)) +
-    geom_bar(stat = "count") +
-    coord_flip() +
-    facet_wrap(vars(column), scales = "free")
+  if(ncol(d_num > 0)){
+
+    d_num <- d_num %>%
+      pivot_longer(cols = everything(),
+                   names_to = "column",
+                   values_to = "value")
+
+
+    p_num <- d_num %>%
+      ggplot(aes(x = value)) +
+      geom_histogram() +
+      facet_wrap(vars(column), scales = "free")
+  }
+
+  d_other <- .data %>%
+    select_if(function(x) !is.numeric(x))
+
+  if(ncol(d_other > 0)){
+    d_other <- d_other %>%
+      mutate_if(.predicate = function(x) !is.factor(x), .funs = as.factor) %>%
+      pivot_longer(cols = everything(),
+                   names_to = "column",
+                   values_to = "value")
+    p_other <- d_other %>%
+      ggplot(aes(x = value)) +
+      geom_bar(stat = "count") +
+      coord_flip() +
+      facet_wrap(vars(column), scales = "free")
+  }
+
+  p_list <- list()
+
+  if(exists("p_num")){
+    p_list$p_num <- p_num
+  }
+
+  if(exists("p_other")){
+    p_list$p_other <- p_other
+  }
+
 
   if(plot){
     p_num
     p_other
   } else {
-    return(list(p_num = p_num, p_other = p_other))
+    return(p_list)
   }
 }
