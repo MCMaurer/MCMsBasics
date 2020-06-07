@@ -13,7 +13,7 @@
 #'
 #'
 
-ggskim <- function(.data, plot = T){
+ggskim <- function(.data, plot = T, ...){
 
   p_num <- .data %>%
     select_if(is.numeric) %>%
