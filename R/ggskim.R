@@ -29,7 +29,8 @@ ggskim <- function(.data, ...){
     p_num <- d_num %>%
       ggplot(aes(x = value)) +
       geom_histogram() +
-      facet_wrap(vars(column), scales = "free")
+      facet_wrap(vars(column), scales = "free") +
+      theme_minimal()
   }
 
   d_other <- .data %>%
@@ -45,7 +46,8 @@ ggskim <- function(.data, ...){
       ggplot(aes(x = value)) +
       geom_bar(stat = "count") +
       coord_flip() +
-      facet_wrap(vars(column), scales = "free")
+      facet_wrap(vars(column), scales = "free") +
+      theme_minimal()
   }
 
   p_list <- list()
