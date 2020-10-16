@@ -8,6 +8,8 @@ gghist(.data, bins = length(.data)/20)
 }
 \arguments{
 \item{.data:}{a vector of values, such as one returned by `rnorm()`}
+
+\item{bins:}{how many bins the histogram uses. Defaults to length of data divided by 20}
 }
 \value{
 a histogram ggplot object

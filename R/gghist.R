@@ -1,6 +1,7 @@
 #' Quickly make a ggplot histogram
 #'
 #' @param .data: a vector of values, such as one returned by `rnorm()`
+#' @param bins: how many bins the histogram uses. Defaults to length of data divided by 20
 #'
 #' @return a histogram ggplot object
 #' @export
