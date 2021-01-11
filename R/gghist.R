@@ -1,4 +1,4 @@
-#' Quickly make a ggplot histogram
+#' Quickly make a ggplot histogram from a single vector
 #'
 #' @param .data: a vector of values, such as one returned by `rnorm()`
 #' @param bins: how many bins the histogram uses. Defaults to length of data divided by 20
