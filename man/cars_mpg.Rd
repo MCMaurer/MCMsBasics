@@ -93,6 +93,6 @@ A data frame with 43,221 rows and 83 variables:
 cars_mpg
 }
 \description{
-A dataset containing information on various aspects of fuel economy for cars from 1984 to 2020.
+A dataset containing information on various aspects of fuel economy for cars from 1984 to 2020. Data have been cleaned to include more explicit NAs, where in the original data missing values were sometimes denoted by -1 or 0.
 }
 \keyword{datasets}

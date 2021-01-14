@@ -2,7 +2,7 @@
 % Please edit documentation in R/gghist.R
 \name{gghist}
 \alias{gghist}
-\title{Quickly make a ggplot histogram}
+\title{Quickly make a ggplot histogram from a single vector}
 \usage{
 gghist(.data, bins = length(.data)/20)
 }
@@ -15,7 +15,7 @@ gghist(.data, bins = length(.data)/20)
 a histogram ggplot object
 }
 \description{
-Quickly make a ggplot histogram
+Quickly make a ggplot histogram from a single vector
 }
 \examples{
 rnorm(1000, 0, 1) \%>\% gghist()
