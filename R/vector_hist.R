@@ -1,4 +1,4 @@
-#' Quickly make a ggplot histogram from a dataframe and variable name
+#' Quickly make a ggplot histogram from a single vector
 #'
 #' @param .data: a vector of values, such as one returned by `rnorm()`
 #' @param bins: how many bins the histogram uses. Defaults to ggplot's default
@@ -8,11 +8,12 @@
 #' @import ggplot2
 #'
 #' @examples
-#' mtcars %>% gghist(mpg)
+#' rnorm(1000, 0, 1) %>% vector_hist()
 #'
 #'
 
-gghist <- function(.data, var, ...){
-  ggplot(d, aes(x = !!enquo(var)), ...) +
+vector_hist <- function(.data, ...){
+  d <- data.frame(val = .data)
+  ggplot(d, aes(x = val), ...) +
     geom_histogram()
 }
