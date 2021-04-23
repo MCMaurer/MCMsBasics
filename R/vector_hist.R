@@ -12,8 +12,8 @@
 #'
 #'
 
-vector_hist <- function(.data, ...){
+vector_hist <- function(.data, bins = NULL){
   d <- data.frame(val = .data)
-  ggplot(d, aes(x = val), ...) +
-    geom_histogram()
+  ggplot(d, aes(x = val)) +
+    geom_histogram(bins = bins)
 }

@@ -4,7 +4,7 @@
 \alias{vector_hist}
 \title{Quickly make a ggplot histogram from a single vector}
 \usage{
-vector_hist(.data, ...)
+vector_hist(.data, bins = NULL)
 }
 \arguments{
 \item{.data:}{a vector of values, such as one returned by `rnorm()`}

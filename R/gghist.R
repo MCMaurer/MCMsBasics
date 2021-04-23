@@ -12,7 +12,7 @@
 #'
 #'
 
-gghist <- function(.data, var, ...){
-  ggplot(d, aes(x = !!enquo(var)), ...) +
-    geom_histogram()
+gghist <- function(.data, var, bins = NULL){
+  ggplot(.data, aes(x = !!enquo(var))) +
+    geom_histogram(bins = bins)
 }

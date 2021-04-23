@@ -4,7 +4,7 @@
 \alias{gghist}
 \title{Quickly make a ggplot histogram from a dataframe and variable name}
 \usage{
-gghist(.data, var, ...)
+gghist(.data, var, bins = NULL)
 }
 \arguments{
 \item{.data:}{a vector of values, such as one returned by `rnorm()`}
