@@ -2,7 +2,7 @@
 #' @rdname geom_tuftebox
 #' @import ggplot2
 #' @import grid
-#'#' @section Computed variables:
+#' @section Computed variables:
 #' `stat_tuftebox()` provides the following variables, some of which depend on the orientation:
 #' \describe{
 #'   \item{ymin }{minimum observation, bottom of lower segment}
