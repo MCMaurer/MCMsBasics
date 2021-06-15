@@ -2,6 +2,7 @@
 #'
 #'
 #' @import rlang
+#' @export
 #'
 #'
 #'
