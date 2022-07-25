@@ -13,9 +13,6 @@ scale_x_quantile(val, prob = seq(0, 1, 0.25), digits = 1, ...)
 
 \item{digits:}{number of digits to round the quantiles to}
 }
-\value{
-
-}
 \description{
 Set the x axis scale to continuous with quantile breaks
 }

@@ -28,3 +28,5 @@ minimal_ggplot_theme <- function(base_family = "Roboto Condensed", gridlines = F
 
   return(min_theme)
 }
+
+#TODO: strip.text doesn't show up as white, but I think it should via inheritance. Look into this. Could try making a complete theme, specifying every single item
