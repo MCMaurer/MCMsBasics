@@ -122,12 +122,12 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
                            title_family = "FrauncesSuperSoftWonky-BlackItalic",
                            subtitle_family = "FrauncesSuperSoftWonky-LightItalic",
                            axis_family = "FrauncesSuperSoftWonky-Light",
-                               base_color = "white",
-                               primary_color = "grey90",
-                               accent_color = "grey20",
-                               gridlines = F,
-                               facet_outlines = F,
-                               base_size = 10) {
+                           base_color = "white",
+                           primary_color = "grey10",
+                           accent_color = "grey90",
+                           gridlines = F,
+                           facet_outlines = F,
+                           base_size = 10) {
   min_theme <- theme_bw() +
     theme(
       text = element_text(
@@ -150,7 +150,7 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
       axis.line = element_blank(),
       panel.grid.minor = element_blank(),
       axis.ticks = element_blank(),
-      plot.background = element_rect(fill = primary_color),
+      plot.background = element_rect(fill = primary_color, color = NA),
       axis.text = element_text(
         family = base_family,
         colour = base_color,
