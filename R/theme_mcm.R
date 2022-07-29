@@ -176,12 +176,12 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
         colour = accent_color,
         size = base_size * 1.4
       ),
-      legend.text = element_markdown(
+      legend.title = element_markdown(
         family = axis_family,
         colour = accent_color,
         size = base_size * 1.4
       ),
-      legend.title = element_markdown(
+      legend.text = element_markdown(
         family = base_family,
         colour = base_color,
         size = base_size * 1.2
