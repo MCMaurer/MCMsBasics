@@ -78,12 +78,12 @@ theme_mcm <- function(base_family = "FrauncesSuperSoftWonky-Light",
       legend.text = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
+        size = base_size * 1.2
       ),
       legend.title = element_markdown(
         family = base_family,
         colour = base_color,
-        size = base_size * 1.2
+        size = base_size * 1.4
       )
     )
 
