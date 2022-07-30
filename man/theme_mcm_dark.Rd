@@ -10,8 +10,8 @@ theme_mcm_dark(
   subtitle_family = "FrauncesSuperSoftWonky-LightItalic",
   axis_family = "FrauncesSuperSoftWonky-Light",
   base_color = "white",
-  primary_color = "grey90",
-  accent_color = "grey20",
+  primary_color = "grey10",
+  accent_color = "grey90",
   gridlines = F,
   facet_outlines = F,
   base_size = 10

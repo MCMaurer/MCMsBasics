@@ -4,7 +4,7 @@
 #' @param prob: a sequence of probability values, ie c(0, 0.5, 1) or seq(0, 1, 0.25)
 #' @param digits: number of digits to round the quantiles to
 #'
-#' @return
+#' @return a ggplot2 scale
 #' @export
 #' @import ggplot2
 #'

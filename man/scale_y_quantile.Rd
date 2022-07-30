@@ -13,6 +13,9 @@ scale_y_quantile(val, prob = seq(0, 1, 0.25), digits = 1, ...)
 
 \item{digits:}{number of digits to round the quantiles to}
 }
+\value{
+a ggplot2 scale
+}
 \description{
 Set the y axis scale to continuous with quantile breaks
 }

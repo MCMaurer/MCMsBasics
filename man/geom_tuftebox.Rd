@@ -36,10 +36,9 @@ Geom for Tufte-style minimal boxplots
 
 Stat for Tufte-style minimal boxplots
 }
-\section{}{
-NA
-}
+\details{
 
+}
 \examples{
 p <- ggplot(mpg, aes(class, hwy))
 p + geom_tuftebox()

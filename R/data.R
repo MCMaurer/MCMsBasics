@@ -2,6 +2,12 @@
 #'
 #' A dataset containing information on various aspects of fuel economy for cars from 1984 to 2020. Data have been cleaned to include more explicit NAs, where in the original data missing values were sometimes denoted by -1 or 0.
 #'
+#' Produced via:
+#' library(tidyverse)
+#' cars_mpg <- read_csv("https://www.fueleconomy.gov/feg/epadata/vehicles.csv") %>%
+#' mutate(across(where(is.numeric), ~ifelse(.x == 0 | .x == -1, NA, .x)))
+#' save(cars_mpg, file = "data/cars_mpg.rda")
+#'
 #' @format A data frame with 43,221 rows and 83 variables:
 #' \describe{
 #' \item{barrels08}{annual petroleum consumption in barrels for fuelType1 (1)}
@@ -68,6 +74,7 @@
 #' \item{UCityA}{unadjusted city MPG for fuelType2; see the description of the EPA test procedures}
 #' \item{UHighway}{unadjusted highway MPG for fuelType1; see the description of the EPA test procedures}
 #' \item{UHighwayA}{unadjusted highway MPG for fuelType2; see the description of the EPA test procedures}
+#' \item{VClass}{EPA vehicle size class}
 #' \item{year}{model year}
 #' \item{youSaveSpend}{you save/spend over 5 years compared to an average car ($). Savings are positive; a greater amount spent yields a negative number. For dual fuel vehicles, this is the cost savings for gasoline}
 #' \item{sCharger}{if S, this vehicle is supercharged}
@@ -83,4 +90,6 @@
 #' \item{phevComb}{EPA composite gasoline-electricity combined city-highway MPGe for plug-in hybrid vehicles}
 #' }
 #' @source \url{https://www.fueleconomy.gov/feg/ws/index.shtml}
+#' @details {}
 "cars_mpg"
+

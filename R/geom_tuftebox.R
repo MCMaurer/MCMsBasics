@@ -2,7 +2,6 @@
 #' @import ggplot2
 #' @import scales
 #' @import grid
-#'
 #' @param geom,stat Use to override the default connection between
 #'   `geom_tuftebox()` and `stat_tuftebox()`.
 #' @examples
@@ -29,7 +28,6 @@ geom_tuftebox <- function(mapping = NULL,
     )
   }
 
-#' @rdname ggplot2-ggproto
 #' @format NULL
 #' @usage NULL
 #' @export
