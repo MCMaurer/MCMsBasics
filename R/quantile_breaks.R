@@ -9,5 +9,5 @@
 #' @examples
 #' quantile_breaks(1:10, c(0,0.5,1), 2)
 quantile_breaks <- function(value, prob, digits = 1) {
-  function(x) round(as.numeric(quantile(value, prob)), digits = digits)
+  function(x) round(as.numeric(quantile(value, prob, na.rm = T)), digits = digits)
 }
