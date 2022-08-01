@@ -147,7 +147,7 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
                            mult3 = 1.5,
                            mult4 = 2.25,
                            large_lineheight = F) {
-  min_theme <- theme_bw() +
+  a <- theme_bw() +
     theme(
       text = element_text(
         family = base_family,
@@ -203,11 +203,11 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
     )
 
   if (!gridlines) {
-    min_theme <- min_theme + theme(panel.grid = element_blank())
+    a <- a + theme(panel.grid = element_blank())
   }
 
   if (!facet_outlines) {
-    min_theme <- min_theme + theme(panel.border = element_blank())
+    a <- a + theme(panel.border = element_blank())
   }
 
   if (large_lineheight){
