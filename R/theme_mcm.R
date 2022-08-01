@@ -18,25 +18,29 @@
 #' @examples
 #' mtcars %>% ggplot(aes(x = wt, y = mpg)) + geom_point() + theme_mcm()
 theme_mcm <- function(base_family = "FrauncesSuperSoftWonky-Light",
-                          title_family = "FrauncesSuperSoftWonky-BlackItalic",
-                          subtitle_family = "FrauncesSuperSoftWonky-LightItalic",
-                          axis_family = "FrauncesSuperSoftWonky-Light",
-                          base_color = "gray10",
-                          primary_color = "white",
-                          accent_color = "black",
-                          base_size = 10,
-                          gridlines = F,
-                          facet_outlines = F) {
-  min_theme <- theme_bw() +
+                      title_family = "FrauncesSuperSoftWonky-BlackItalic",
+                      subtitle_family = "FrauncesSuperSoftWonky-LightItalic",
+                      axis_family = "FrauncesSuperSoftWonky-Light",
+                      base_color = "gray10",
+                      primary_color = "white",
+                      accent_color = "black",
+                      base_size = 10,
+                      mult1 = 1.2,
+                      mult2 = 1.4,
+                      mult3 = 1.5,
+                      mult4 = 2.25,
+                      gridlines = F,
+                      facet_outlines = F,
+                      large_lineheight = F) {
+  a <- theme_bw() +
     theme(
       text = element_text(
         family = base_family,
         colour = base_color,
         size = base_size
       ),
-      line = element_line(
-        colour = base_color,
-        size = 0.2),
+      line = element_line(colour = base_color,
+                          size = 0.2),
       legend.background = element_blank(),
       legend.key = element_blank(),
       panel.background = element_blank(),
@@ -58,45 +62,54 @@ theme_mcm <- function(base_family = "FrauncesSuperSoftWonky-Light",
       plot.title = element_markdown(
         family = title_family,
         colour = accent_color,
-        size = base_size * 1.5 ^ 2
-      ),
-      plot.subtitle = element_markdown(
-        family = subtitle_family,
-        colour = accent_color,
-        size = base_size * 1.5,
-        lineheight = 1
+        size = base_size * mult4
       ),
       axis.title = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
+        size = base_size * mult2
       ),
       strip.text = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
-      ),
-      legend.text = element_markdown(
-        family = axis_family,
-        colour = accent_color,
-        size = base_size * 1.2
+        size = base_size * mult2
       ),
       legend.title = element_markdown(
         family = base_family,
         colour = base_color,
-        size = base_size * 1.4
+        size = base_size * mult2
+      ),
+      legend.text = element_markdown(
+        family = axis_family,
+        colour = accent_color,
+        size = base_size * mult1
       )
     )
 
   if (!gridlines) {
-    min_theme <- min_theme + theme(panel.grid = element_blank())
+    a <- a + theme(panel.grid = element_blank())
   }
 
   if (!facet_outlines) {
-    min_theme <- min_theme + theme(panel.border = element_blank())
+    a <- a + theme(panel.border = element_blank())
   }
 
-  return(min_theme)
+  if (large_lineheight){
+    a <- a + theme(plot.subtitle = element_markdown(
+      family = subtitle_family,
+      colour = accent_color,
+      size = base_size * mult3,
+      lineheight = 1
+    ))
+  } else {
+    a <- a + theme(plot.subtitle = element_markdown(
+      family = subtitle_family,
+      colour = accent_color,
+      size = base_size * mult3
+    ))
+  }
+
+  return(a)
 }
 
 
@@ -128,7 +141,12 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
                            accent_color = "grey90",
                            gridlines = F,
                            facet_outlines = F,
-                           base_size = 10) {
+                           base_size = 10,
+                           mult1 = 1.2,
+                           mult2 = 1.4,
+                           mult3 = 1.5,
+                           mult4 = 2.25,
+                           large_lineheight = F) {
   min_theme <- theme_bw() +
     theme(
       text = element_text(
@@ -160,33 +178,27 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
       plot.title = element_markdown(
         family = title_family,
         colour = accent_color,
-        size = base_size * 1.5 ^ 2
-      ),
-      plot.subtitle = element_markdown(
-        family = subtitle_family,
-        colour = accent_color,
-        size = base_size * 1.5,
-        lineheight = 1
+        size = base_size * mult4
       ),
       axis.title = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
+        size = base_size * mult2
       ),
       strip.text = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
+        size = base_size * mult2
       ),
       legend.title = element_markdown(
         family = axis_family,
         colour = accent_color,
-        size = base_size * 1.4
+        size = base_size * mult2
       ),
       legend.text = element_markdown(
         family = base_family,
         colour = base_color,
-        size = base_size * 1.2
+        size = base_size * mult1
       )
     )
 
@@ -196,6 +208,21 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
 
   if (!facet_outlines) {
     min_theme <- min_theme + theme(panel.border = element_blank())
+  }
+
+  if (large_lineheight){
+    a <- a + theme(plot.subtitle = element_markdown(
+      family = subtitle_family,
+      colour = accent_color,
+      size = base_size * mult3,
+      lineheight = 1
+    ))
+  } else {
+    a <- a + theme(plot.subtitle = element_markdown(
+      family = subtitle_family,
+      colour = accent_color,
+      size = base_size * mult3
+    ))
   }
 
   return(min_theme)
