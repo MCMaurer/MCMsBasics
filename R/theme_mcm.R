@@ -225,5 +225,5 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
     ))
   }
 
-  return(min_theme)
+  return(a)
 }
