@@ -63,7 +63,8 @@ theme_mcm <- function(base_family = "FrauncesSuperSoftWonky-Light",
       plot.subtitle = element_markdown(
         family = subtitle_family,
         colour = accent_color,
-        size = base_size * 1.5
+        size = base_size * 1.5,
+        lineheight = 1
       ),
       axis.title = element_markdown(
         family = axis_family,
@@ -164,7 +165,8 @@ theme_mcm_dark <- function(base_family = "FrauncesSuperSoftWonky-Light",
       plot.subtitle = element_markdown(
         family = subtitle_family,
         colour = accent_color,
-        size = base_size * 1.5
+        size = base_size * 1.5,
+        lineheight = 1
       ),
       axis.title = element_markdown(
         family = axis_family,
