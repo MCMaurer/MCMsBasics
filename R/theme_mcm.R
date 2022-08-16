@@ -18,8 +18,6 @@
 #'
 #' @examples
 #' mtcars %>% ggplot(aes(x = wt, y = mpg)) + geom_point() + theme_mcm()
-
-# TODO: might want to look into using ragg. will need to run systemfonts::register_font() on load, but I think that might be the way to go
 theme_mcm <- function (base_family = "fraunces", title_family = "fraunces",
                        subtitle_family = "fraunces", axis_family = "fraunces",
                        base_color = "gray10", primary_color = "white", accent_color = "black",

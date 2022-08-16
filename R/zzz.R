@@ -8,5 +8,5 @@
 }
 
 .onAttach <- function(libname, pkgname){
-  packageStartupMessage("Registered Fraunces fonts, check systemfonts::registry_fonts().")
+  packageStartupMessage("LET'S GET READY TO RRRRRUMBLE!\n\nRegistered Fraunces fonts, check systemfonts::registry_fonts().")
 }
