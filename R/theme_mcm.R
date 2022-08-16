@@ -42,20 +42,20 @@ theme_mcm <- function (base_family = "fraunces", title_family = "fraunces",
                           axis.text = element_text(family = base_family,
                                                    colour = base_color,
                                                    size = base_size),
-                          plot.title = element_text(family = title_family,
+                          plot.title = element_markdown(family = title_family,
                                                     face = "bold.italic",
                                                     colour = accent_color,
                                                     size = base_size * mult4),
-                          axis.title = element_text(family = axis_family,
+                          axis.title = element_markdown(family = axis_family,
                                                     colour = accent_color,
                                                     size = base_size * mult2),
-                          strip.text = element_text(family = axis_family,
+                          strip.text = element_markdown(family = axis_family,
                                                     colour = accent_color,
                                                     size = base_size * mult2),
-                          legend.title = element_text(family = base_family,
+                          legend.title = element_markdown(family = base_family,
                                                       colour = base_color,
                                                       size = base_size * mult2),
-                          legend.text = element_text(family = axis_family,
+                          legend.text = element_markdown(family = axis_family,
                                                      colour = accent_color,
                                                      size = base_size * mult1))
   if (!gridlines) {
@@ -65,14 +65,14 @@ theme_mcm <- function (base_family = "fraunces", title_family = "fraunces",
     a <- a + theme(panel.border = element_blank())
   }
   if (large_lineheight) {
-    a <- a + theme(plot.subtitle = element_text(family = subtitle_family,
+    a <- a + theme(plot.subtitle = element_markdown(family = subtitle_family,
                                                 face = "italic",
                                                 colour = accent_color,
                                                 size = base_size * mult3,
                                                 lineheight = 1))
   }
   else {
-    a <- a + theme(plot.subtitle = element_text(family = subtitle_family,
+    a <- a + theme(plot.subtitle = element_markdown(family = subtitle_family,
                                                 face = "italic",
                                                 colour = accent_color,
                                                 size = base_size * mult3))
