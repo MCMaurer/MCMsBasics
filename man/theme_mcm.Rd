@@ -5,16 +5,21 @@
 \title{A light ggplot theme for MCM's personal use}
 \usage{
 theme_mcm(
-  base_family = "FrauncesSuperSoftWonky-Light",
-  title_family = "FrauncesSuperSoftWonky-BlackItalic",
-  subtitle_family = "FrauncesSuperSoftWonky-LightItalic",
-  axis_family = "FrauncesSuperSoftWonky-Light",
+  base_family = "fraunces",
+  title_family = "fraunces",
+  subtitle_family = "fraunces",
+  axis_family = "fraunces",
   base_color = "gray10",
   primary_color = "white",
   accent_color = "black",
   base_size = 10,
+  mult1 = 1.2,
+  mult2 = 1.4,
+  mult3 = 1.5,
+  mult4 = 2.25,
   gridlines = F,
-  facet_outlines = F
+  facet_outlines = F,
+  large_lineheight = F
 )
 }
 \arguments{
@@ -37,6 +42,8 @@ theme_mcm(
 \item{gridlines:}{should gridlines be displayed?}
 
 \item{facet_outlines:}{should facets be outlined?}
+
+\item{large_lineheight:}{should the subtitle lineheight be increased to 1 to prevent overlaps?}
 }
 \value{
 A ggplot theme
